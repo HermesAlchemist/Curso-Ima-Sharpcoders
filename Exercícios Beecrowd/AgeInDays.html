@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        let ageDays = parseInt(prompt("Digite sua idade em dias"));
+        let years = 0;
+        let months = 0;
+        let days = 0;
+
+        while (ageDays > 0) {
+            if (ageDays >= 365) {
+                years++;
+                ageDays -= 365;
+            } else if (ageDays > 30) {
+                months++;
+                ageDays -= 60;
+            } else {
+                days = ageDays;
+                ageDays = 0;
+            }
+        }
+        
+        console.log(`${years} ano(s)\n${months} mes(es)\n${days} dia(s)`)
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        let input = prompt("Digite um número");
+        let N = parseInt(input);
+
+            let bankNotes = [100, 50, 20, 10, 5, 2, 1];
+
+            console.log(N);
+
+            for (let i = 0; i < bankNotes.length; i++) {
+                let amountOfNotes = Math.floor(N / bankNotes[i]);
+                console.log(amountOfNotes + " nota(s) de R$ " + bankNotes[i] + ",00");
+                N %= bankNotes[i];
+            }
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

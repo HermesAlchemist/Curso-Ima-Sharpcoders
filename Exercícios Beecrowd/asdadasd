@@ -1,0 +1,45 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.trim().split('\n');
+
+function generateBidimensionalArray(N) {
+    const array = new Array(N);
+
+    for (let i = 0; i < N; i++) {
+        array[i] = new Array(N);
+        for (let j = 0; j < N; j++) {
+            if (i === j) {
+                array[i][j] = 1;
+            } else if (i + j === N - 1) {
+                array[i][j] = 2;
+            } else {
+                array[i][j] = 3;
+            }
+        }
+    }
+
+    return array;
+}
+
+function printBidimensionalArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        let row = '';
+        for (let j = 0; j < array[i].length; j++) {
+            row += array[i][j];
+        }
+        console.log(row);
+    }
+}
+
+for (let i = 0; i < lines.length; i++) {
+    const N = parseInt(lines[i]);
+    if (!isNaN(N)) {
+        const array = generateBidimensionalArray(N);
+        if (N > 1) {
+            array[N - 1][1] = 2;
+        }
+        printBidimensionalArray(array);
+        if (i < lines.length - 1) {
+            console.log(); // Blank line between test cases
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        let ageDays = parseInt(prompt("Digite a idade em dias")); // Exemplo de entrada
+        let years = 0;
+        let months = 0;
+        let days = 0;
+
+        let startTime = performance.now();
+
+        // Abordagem com o loop while
+        while (ageDays > 0) {
+            if (ageDays >= 365) {
+                years++;
+                ageDays -= 365;
+            } else if (ageDays >= 30) {
+                months++;
+                ageDays -= 30;
+            } else {
+                days = ageDays;
+                ageDays = 0;
+            }
+        }
+
+        let endTime = performance.now();
+        console.log(`Loop while: ${endTime - startTime} ms`);
+
+        // Resetar variáveis
+        years = 0;
+        months = 0;
+        days = 0;
+        ageDays = 36500; // Restaurar a entrada
+
+        startTime = performance.now();
+
+        // Abordagem com o loop for
+        for (; ageDays >= 365; years++) {
+            ageDays -= 365;
+        }
+
+        for (; ageDays >= 30; months++) {
+            ageDays -= 30;
+        }
+
+        days = ageDays;
+
+        endTime = performance.now();
+        console.log(`Loop for: ${endTime - startTime} ms`);
+
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>
