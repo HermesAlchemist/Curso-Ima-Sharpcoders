@@ -12,4 +12,6 @@ git checkout (branchName)
 git remote add origin (link)
 git branch -M main
 git push -u origin main
-git pull origin main
+git merge (nome da branch pronta)
+git pull origin (main) -> atualiza apenas o branch atual
+git pull -> atualiza todos branchs
