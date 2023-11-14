@@ -7,6 +7,9 @@ git add (filename)
 git rm --cached (filename)
 git status
 git commit -m "message"
+git log
 git checkout (branchName)
+git remote add origin (link)
+git branch -M main
 git push -u origin main
 git pull origin main
