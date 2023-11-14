@@ -1,0 +1,15 @@
+Algoritmo -> Uma sequência lógica para executar determinada ação
+
+Um algoritmo pode ser desenvolvido por fluxograma, por exemplo.
+
+Linguagens:
+
+Html:
+Css:
+Javascript:
+
+"window.onload = function () {
+	document.getElementByTagName("h1")[0].innerHTML = "Hello World!"
+}
+
+window.onload faz com que o javascript espere o carregamento do body.

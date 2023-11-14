@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        
+        //Valida
+        let valida = false;
+
+        //informe um número
+        let numero = parseInt(prompt("Informe um número"))
+
+        // Contabilizar
+        let par = 0;
+        let impar = 0;
+
+        // Laço
+        for(let i=0; i<=numero; i++) {
+            // Condicional
+            if(i % 2 == 0) {
+                par++;
+            } else {
+                impar++;
+            }
+         }
+
+         // Retornar contadores
+         document.write(`Pares: ${par}`);
+         document.write(`<hr>Impares: ${impar}`)
+    </script>
+
+
+</head>
+<body>
+  
+</body>
+</html>

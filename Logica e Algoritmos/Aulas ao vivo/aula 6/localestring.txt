@@ -1,0 +1,4 @@
+funções são ações lógicas, onde são executadas através de ações ou determinados períodos.
+
+
+toLocaleString()
