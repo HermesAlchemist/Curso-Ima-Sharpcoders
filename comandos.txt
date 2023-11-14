@@ -1,5 +1,7 @@
 COMANDOS GIT
-
+git config --global user.name "Heitor Lemos"
+git config --global user.email "heitorlemos@gmail.com"
+git init
 git add .
 git add (filename)
 git rm --cached (filename)
